@@ -23,7 +23,7 @@ if(!isset ($_SESSION['css']))
     $_SESSION['css'] = 0;
     echo "<link rel=\"stylesheet\" 
             type=\"text/css\"
-            href=\"../config/".$_SESSION['css'].".css\">";
+            href=\"./config/".$_SESSION['css'].".css\">";
 }
 else
 {
@@ -33,7 +33,7 @@ else
     $_SESSION['css'] = $_SESSION['css'];
     echo "<link rel=\"stylesheet\" 
             type=\"text/css\"
-            href=\"../config/".$_SESSION['css'].".css\">";
+            href=\"./config/".$_SESSION['css'].".css\">";
 }
 
 
@@ -44,7 +44,7 @@ if(isset ($_POST['css']))
     $_SESSION['css'] = $_POST['css'];
     echo "<link rel=\"stylesheet\" 
             type=\"text/css\"
-            href=\"../config/".$_SESSION['css'].".css\">";
+            href=\"./config/".$_SESSION['css'].".css\">";
 }
 
 // ERSTAUFRUF - SPRACHE
