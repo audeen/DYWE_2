@@ -1,12 +1,20 @@
 body {
     background-color: #BCBCBC;
     font-family:        arial, sans-serif;
-    color:              #fff;
-    
+    color:          #fff;
 }
 a {
-    color:           #fff;
+    color:           #f00;
 }
+
+.main {
+    background-color: #ff0;
+    border-radius: 50px;
+    position: absolute;
+    left: 150px;
+    height: 700px;
+    max-width: 1200px;
+ }
 
 a:link {
     text-decoration:    none;
@@ -35,8 +43,8 @@ a:active {
 
     position:            absolute;
     height:              100px;
-    width:               1200px;
-    color:               #fff;
+    max-width:               1200px;
+    color:               #f00;
     text-align:          center;
     
 }
@@ -47,7 +55,7 @@ a:active {
     top:                100px;
     width:              150px;
     height:             550px;
-    color:             #fff;
+    color:             #f00;
     padding:             10px 0px 0px 10px;
    
 }
@@ -56,21 +64,13 @@ a:active {
     position:            absolute;
     top:                 650px;
     height:              50px;
-    width:               1200px;
+    max-width:               1200px;
     border-bottom-left-radius: 30px;
     text-align:          center;
     margin-top:          10px;
 }
 
-.main {
-    background-color: #00f;
-    border-radius: 50px;
-    position: absolute;
-    left: 150px;
-    height: 700px;
-    width: 1200px;
-    
-}
+
 .content {
     position: absolute;
     box-sizing: border-box;
@@ -78,7 +78,7 @@ a:active {
     top: 100px;
     width: 1050px;
     height: 550px;
-    background-color: #fff;
-    color:              #000;;
+    background-color: #00f;
+    color: #fff;
     padding: 10px 0px 0px 10px;
 }

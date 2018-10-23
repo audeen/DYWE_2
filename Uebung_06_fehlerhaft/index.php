@@ -1,14 +1,14 @@
 <?php
 
 //////////////////////////////////////////////////
-//  Übung 005    - index.php                     //
+//  Übung 006s    - index.php                     //
 //  Fachbereich Medien FH-Kiel - 3. Semester    //
 //  Beschreibung : session                      //
 //  Ersteller    : Jannik Sievert               //
 //  Stand        : 17.10.2018                   //
 //  Version      : 1.0                          //
 //////////////////////////////////////////////////
-
+ 
 session_start();
 include("./texte/uebung_06_texte.php");
 $browsersprache = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0,2);
@@ -49,7 +49,7 @@ if(isset ($_POST['css']))
 
 // ERSTAUFRUF - SPRACHE
 
-if(!isset ($_SESSION['language']) && $browsersprache= de)
+if(!isset ($_SESSION['language']) && $browsersprache= 'de')
 {
     $_SESSION['language'] = 0;
 }

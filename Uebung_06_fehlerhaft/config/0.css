@@ -4,6 +4,7 @@ body {
     color:              #fff;
     
 }
+
 a {
     color:           #fff;
 }
@@ -68,7 +69,7 @@ a:active {
     position: absolute;
     left: 150px;
     height: 700px;
-    width: 1200px;
+    width:               1200px;
     
 }
 .content {
