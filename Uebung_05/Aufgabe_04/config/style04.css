@@ -1,0 +1,19 @@
+body {
+    background-color: #aeaeae;
+}
+
+.ger {
+    background: url("../images/deut.jpg");
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 87px;
+
+}
+
+.eng {
+    background: url("../images/usa.jpg");
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 87px;
+
+}

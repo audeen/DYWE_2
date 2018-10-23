@@ -1,0 +1,84 @@
+body {
+    background: url("../images/bg.png");
+    background-position: top-left;
+    background-repeat: repeat-on;
+    width: 900px;
+    height: 580px;
+    margin: 0 auto;
+
+}
+
+img {
+    height: 100%;
+    
+}
+.head {
+    height: 70px;
+    width: 100%;
+    background-color:#0f0;
+    position: relative;
+    margin: 10px 0;
+}
+
+.all {
+    position: absolute;
+
+    width: 900px;
+    height: 580px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.menu {
+    width: 180px;
+    height: 100%;
+    
+    margin: 10px 0;
+    background-color: #ff0;
+    position: relative;
+    top: 0px;
+    
+}
+
+.content {
+    width: 660px;
+    
+    margin: 10px 0;
+    overflow-y: scroll;
+    position: relative;
+    left: 240px;
+    top:0px;
+    height: 100%;
+    
+    
+}
+
+.footer {
+    height: 30px;
+    background-color: #f00;
+    
+    
+    
+}
+
+
+td {
+    color: #fff;
+    background-color: #000;
+    width: auto;
+}
+
+.txt {
+    width: 100%;
+    vertical-align: top;
+    text-align: left;
+}
+    
+    
+    
+    
+
+
+    
+    
