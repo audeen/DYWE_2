@@ -9,14 +9,34 @@
 //  Version      : 1.0                          //
 //////////////////////////////////////////////////
 session_start();
-header('content-type:text/html; charset=ISO-8859-1');
 
-$host="localhost"; //Hostname
-$user="root"; //Benutzername
-$pass=""; //Passwort
-$dbase="dywe2"; //Datenbankname
-$db_link = mysqli_connect($host, $user, $pass);
-mysqli_select_db($db_link, $dbase); 
+include ("../../config/config.php");
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+     // username and password sent from form
+    $myusername = mysqli_real_escape_string($db,$_POST['user']);
+    $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+
+    $sql = "SELECT u_id FROM user WHERE user = '$myusername' and password = '$mypassword'";
+    $result = mysqli_query($db,$sql);
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $active = $row['active'];
+
+    $count = mysqli_num_rows($result);
+    // If result matched $myusername and $mypassword, table row must be 1 row
+
+    if($count == 1) {
+        session_register("myusername");
+        $_SESSION['login_user'] = $myusername;
+
+        header("location: liste.php");
+    }
+    else {
+        $error = "Eingabe falsch";
+    }
+}
+
 
 
 
@@ -31,18 +51,18 @@ echo "<body>";
     echo "<div class=\"site\">";
         echo "<h3>Interner Bereich - Anmeldung erfoderlich</h3>";
         echo "<br>";
-        echo "<form action=\"liste.php\">";
+        echo "<form action=\"\" method= \"POST\">";
         echo "<table>";
             echo "<tr>";
                 echo "<td>Anmeldename:</td>";
                 echo "<td>";
-                    echo "<input name=\"ename\" type=\"text\">";
+                    echo "<input name=\"user\" type=\"text\">";
                 echo "</td>";
             echo "</tr>";
             echo "<tr>";
                 echo "<td>Passwort:</td>";
                 echo "<td>";
-                   echo "<input name=\"epass\" type=\"password\">";
+                   echo "<input name=\"password\" type=\"password\">";
                 echo "</td>";
             echo "</tr>";
             echo "<tr>";

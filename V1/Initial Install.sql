@@ -1,15 +1,15 @@
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `dywe2`.`user`(
-    `primärschlüssel` INT(10) NOT NULL AUTO_INCREMENT ,
-    `benutzername` VARCHAR(50) NOT NULL ,
-    `passwort` VARCHAR(50) NOT NULL ,
-    PRIMARY KEY (`primärschlüssel`)
-    ) 
+DROP TABLE IF EXISTS user;
+CREATE TABLE user (
+    `u_id` INT(10) NOT NULL AUTO_INCREMENT ,
+    `name` VARCHAR(50) NOT NULL ,
+    `password` VARCHAR(50) NOT NULL ,
+    PRIMARY KEY (`u_id`)
+    ) ;
 
-INSERT INTO `user` (`primärschlüssel`, `benutzername`, `passwort`) VALUES (1, `admin`, `admin`);
+INSERT INTO user  VALUES (1, 'admin', 'admin');
 
-DROP TABLE IF EXISTS `inhalt`;
-CREATE TABLE `dywe2.inhalt` (
+DROP TABLE IF EXISTS inhalt;
+CREATE TABLE inhalt (
     `primärschlüssel` INT(10) NOT NULL AUTO_INCREMENT ,
     `fremdschlüssel_art` INT(10) default 1,
     `image` VARCHAR(100),
@@ -20,7 +20,7 @@ CREATE TABLE `dywe2.inhalt` (
     `pdf`VARCHAR(100),
     `speicherzeit` INT(12) default 0,
     PRIMARY KEY (`primärschlüssel`)
-)
+);
 
 INSERT INTO inhalt VALUES (
     1,
@@ -36,16 +36,16 @@ INSERT INTO inhalt VALUES (
     Ammenhaiartigen an.",
     '',
     1540287161
-)
+);
 
-DROP TABLE IF EXISTS `art`;
-CREATE TABLE `art` (
+DROP TABLE IF EXISTS art;
+CREATE TABLE art (
     `primärschlüssel` INT(10) NOT NULL AUTO_INCREMENT, 
     `bezeichnung` VARCHAR(50),
     PRIMARY KEY (`primärschlüssel`)
-)
+);
 
 INSERT INTO art VALUES (
     1, 
     "FISCH"
-)
+);
