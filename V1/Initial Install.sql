@@ -1,17 +1,17 @@
 DROP TABLE IF EXISTS user;
 CREATE TABLE user (
     `u_id` INT(10) NOT NULL AUTO_INCREMENT ,
-    `name` VARCHAR(50) NOT NULL ,
-    `password` VARCHAR(50) NOT NULL ,
+    `u_name` VARCHAR(50) NOT NULL ,
+    `u_pw` VARCHAR(50) NOT NULL ,
     PRIMARY KEY (`u_id`)
     ) ;
 
-INSERT INTO user  VALUES (1, 'admin', 'admin');
+INSERT INTO user VALUES (1, 'admin', 'admin');
 
 DROP TABLE IF EXISTS inhalt;
 CREATE TABLE inhalt (
-    `primärschlüssel` INT(10) NOT NULL AUTO_INCREMENT ,
-    `fremdschlüssel_art` INT(10) default 1,
+    `i_id` INT(10) NOT NULL AUTO_INCREMENT ,
+    `i_f` INT(10) default 1,
     `image` VARCHAR(100),
     `image_layout` VARCHAR(1) default 1,
     `image_anordnung` VARCHAR(1) default 1,
@@ -19,7 +19,7 @@ CREATE TABLE inhalt (
     `text` TEXT,
     `pdf`VARCHAR(100),
     `speicherzeit` INT(12) default 0,
-    PRIMARY KEY (`primärschlüssel`)
+    PRIMARY KEY (`i_id`)
 );
 
 INSERT INTO inhalt VALUES (
@@ -40,9 +40,9 @@ INSERT INTO inhalt VALUES (
 
 DROP TABLE IF EXISTS art;
 CREATE TABLE art (
-    `primärschlüssel` INT(10) NOT NULL AUTO_INCREMENT, 
-    `bezeichnung` VARCHAR(50),
-    PRIMARY KEY (`primärschlüssel`)
+    `a_id` INT(10) NOT NULL AUTO_INCREMENT, 
+    `a_name` VARCHAR(50),
+    PRIMARY KEY (`art_id`)
 );
 
 INSERT INTO art VALUES (
