@@ -14,8 +14,10 @@ $dbase = mysqli_select_db($db_link, $db_name) */
 $host="localhost"; //Hostname
 $user="root"; //Benutzername
 $pass=""; //Passwort
-$dbase="dywe2"; //Datenbankname
-$db = mysqli_connect($host, $user, $pass, $dbase);
-
+$db_name="dywe2"; //Datenbankname
+$db_link = mysqli_connect($host, $user, $pass, $db_name);
+/* $db_con = mysqli_select_db($db_link, $db_name);
+ */
+$space4 = "    ";
 
 ?>

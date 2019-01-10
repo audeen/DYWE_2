@@ -1,25 +1,23 @@
-DROP TABLE IF EXISTS user;
-CREATE TABLE user (
-    `u_id` INT(10) NOT NULL AUTO_INCREMENT ,
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+    `user_id` INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT ,
     `u_name` VARCHAR(50) NOT NULL ,
-    `u_pw` VARCHAR(50) NOT NULL ,
-    PRIMARY KEY (`u_id`)
-    ) ;
+    `u_pass` VARCHAR(50) NOT NULL 
+    );
 
-INSERT INTO user VALUES (1, 'admin', 'admin');
+INSERT INTO users VALUES (1, 'admin', 'admin');
 
 DROP TABLE IF EXISTS inhalt;
 CREATE TABLE inhalt (
-    `i_id` INT(10) NOT NULL AUTO_INCREMENT ,
-    `i_f` INT(10) default 1,
-    `image` VARCHAR(100),
-    `image_layout` VARCHAR(1) default 1,
-    `image_anordnung` VARCHAR(1) default 1,
-    `ueberschrift` VARCHAR(100),
-    `text` TEXT,
-    `pdf`VARCHAR(100),
-    `speicherzeit` INT(12) default 0,
-    PRIMARY KEY (`i_id`)
+    `inhalt_id` INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `id_art` INT(10) default '1',
+    `i_img` VARCHAR(100) default '',
+    `i_img_layout` VARCHAR(5) default '1',
+    `i_img_anord` VARCHAR(5) default '1',
+    `i_ueber` VARCHAR(100) default '1',
+    `i_text` TEXT default '',
+    `i_pdf`VARCHAR(100) default '',
+    `i_zeit` INT(12) default 0
 );
 
 INSERT INTO inhalt VALUES (
@@ -40,9 +38,8 @@ INSERT INTO inhalt VALUES (
 
 DROP TABLE IF EXISTS art;
 CREATE TABLE art (
-    `a_id` INT(10) NOT NULL AUTO_INCREMENT, 
-    `a_name` VARCHAR(50),
-    PRIMARY KEY (`art_id`)
+    `art_id` INT(10) PRIMARY KEY AUTO_INCREMENT, 
+    `a_name` VARCHAR(50) NOT NULL default ''
 );
 
 INSERT INTO art VALUES (
